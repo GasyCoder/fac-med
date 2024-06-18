@@ -1,0 +1,40 @@
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+    
+        .step.active .step-number {
+            background-color: #007bff;
+            color: white;
+        }
+    
+        .step-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+    
+        .step-title {
+            font-size: 14px;
+        }
+    
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ccc;
+            top: 14px;
+            left: 50%;
+            z-index: -1;
+        }
+    
+        .step.active:not(:last-child)::after {
+            background-color: #007bff;
+        }
